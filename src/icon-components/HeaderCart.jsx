@@ -1,7 +1,7 @@
 import '../styles/header.css';
 
 
-export const Cart = () => {
+export const HeaderCart = () => {
 
 
     return (

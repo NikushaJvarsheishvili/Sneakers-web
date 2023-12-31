@@ -1,15 +1,31 @@
 import './App.css'
 import './styles/config.css'
 import { Header } from './components/Header'
-import { Producte } from './components/Producte'
+import { Product } from './components/Product'
+import { useState } from 'react'
 
 function App() {
+  const [selectedQuantity, setSelectedQuantity] = useState(0)
+  const [selectedItem, setSelectedItem] = useState(0)
+  const [cartItem, setCartItem] = useState(false)
 
 
   return (
     <>
-      <Header />
-      <Producte />
+      <Header 
+        selectedItem={selectedItem}
+        cartItem={cartItem} 
+        setCartItem={setCartItem}
+        setSelectedItem={setSelectedItem}
+      />
+      <Product 
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+        selectedQuantity={selectedQuantity} 
+        setSelectedQuantity={setSelectedQuantity} 
+        cartItem={cartItem} 
+        setCartItem={setCartItem}
+      />
     </>
   )
 }
