@@ -198,3 +198,11 @@ button span {
     opacity: 1;
     transform: translate(0, 0px);
 }
+.burger-menu-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    z-index: -100;
+}

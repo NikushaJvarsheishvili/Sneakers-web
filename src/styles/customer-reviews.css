@@ -1,0 +1,52 @@
+.customerReview-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 78px;
+    /* border: 1px solid red; */
+    min-height: 600px;
+    
+}
+.title-message {
+    width: 63rem;
+    height: 600px;
+}
+.title-and-button {
+    display: flex;
+    justify-content: space-between;
+}
+.Write-review-button {
+    border: none;
+    cursor: pointer;
+    width: 228px;
+    height: 47px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 700;   
+    font-size: 1rem;
+}
+.title {
+    font-size: 1.875rem;
+}
+.users-commentars {
+    display: flex;
+    margin: 10px 15px 30px;
+    width: 597px;
+    gap: 22px;
+    margin-top: 42px;
+}
+.user-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-name {
+    color: #000;
+}
+.advice, .user-name {
+    font-weight: 500;
+}
+.user-description {
+    color: #676767;
+    font-weight: 400;
+}
