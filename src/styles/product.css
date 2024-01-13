@@ -1,7 +1,6 @@
 
 .container {
     display: flex;
-    /* height: 80vh; */
     justify-content: center;
     gap: 124px;
 }
@@ -32,7 +31,6 @@
     outline: none;
     background: transparent;
     cursor: pointer;
-    /* transition: all 0.5s; */
 }
 .thumbnails-image {
     width: 88px;
@@ -45,10 +43,6 @@
 }
 .describtion-side {
     position: relative;
-<<<<<<< HEAD
-=======
-    height: 70vh;
->>>>>>> 7430714b56efa6ab1178f0737c885a6653edf222
     width: 35%;
     transform: translate(0, 90px);
     display: flex;
@@ -145,7 +139,6 @@
     width: 30px;
     justify-content: center;
     align-items: center;
-    /* height: 100%; */
 }
 .increase-product p {
     font-weight: 700;
