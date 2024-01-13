@@ -105,6 +105,7 @@ button span {
     visibility: visible;
     height: 256px;
     transition: all 0.5s;
+    z-index: 10;
 }
 .cart-line {
     border: 1px solid var(--line-color);
@@ -166,12 +167,12 @@ button span {
     font-weight: 700;
     border: none;
     border-radius: 10px;
-    /* transition: all 0.7s; */
+    transition: all 0.3s;
     cursor: pointer;
 }
 .checkout:hover {
     opacity: 0.7;
-    transition: all 0.7s;
+    transition: all 0.3s;
 }
 .cart-item-container {
     display: flex;
@@ -197,4 +198,12 @@ button span {
 .item-container-animation, .line-animation, .title-animation {
     opacity: 1;
     transform: translate(0, 0px);
+}
+.burger-menu-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    z-index: -100;
 }

@@ -1,14 +1,15 @@
 import '../styles/header.css'
+import '../responsive-style/header-resp.css'
 import LogoName from '../assets/logo.svg'
 import { HeaderCart } from '../icon-components/HeaderCart'
 import { assetsBaseUrl, loggedInUser, product } from '../data'
 import { useState } from 'react'
 import { Delete } from '../icon-components/Delete'
-
+import menu from '../assets/icon-menu.svg'
 
 export const Header = (props) => {
     const [openCart, setOpenCart] = useState(false)
-    
+    const [burgerMenu, setBurgerMenu] = useState(false)
 
     const totalPrice = 125 * props.selectedItem
    
@@ -25,11 +26,22 @@ export const Header = (props) => {
         props.setSelectedItem(0)
     }
 
+
+    const burgerMenuFunction = () => {
+        // setBurgerMenu(true)
+        console.log('nika')
+    }
+
     return (
         <>
             <header className="header-container">
                 <div className='center-box'>
                 <div className='left-side'>
+                    <button
+                        onClick={burgerMenuFunction} 
+                        className='burger-menu-button'>
+                        <img src={menu}/>
+                    </button>
                     <img className='logo-name' src={LogoName} />
                     <div className='navigation-bar'>
                         <button><span>Collections</span></button>

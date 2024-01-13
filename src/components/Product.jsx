@@ -1,4 +1,5 @@
 import '../styles/product.css'
+import '../responsive-style/product-resp.css'
 import { ProductStars } from '../product-components/ProductStars'
 import { AddToCart } from '../product-components/AddToCart'
 import { ProductImages } from '../product-components/Product-images'
@@ -22,11 +23,13 @@ export const Product = (props) => {
                 <p className='product-description'>
                 These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
                 </p>
-                <div className='price-and-discount'>
-                    <p className='price'>$125.00</p>
-                    <p className='discount'>50%</p>
+                <div className='old-and-new-price'>
+                    <div className='price-and-discount'>
+                        <p className='price'>$125.00</p>
+                        <p className='discount'>50%</p>
+                    </div>
+                    <p className='old-price'>$250.00</p>
                 </div>
-                <p className='old-price'>$250.00</p>
                 
                 <AddToCart 
                     selectedItem={props.selectedItem}

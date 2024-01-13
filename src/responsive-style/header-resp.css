@@ -1,0 +1,122 @@
+@media screen and (max-width: 1200px) {
+    .line {
+        min-width: 80%;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .line {
+        min-width: 85%;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 874px) {
+    .original-side {
+        transform: translate(30px);
+    }
+    .original-image {
+        width: 350px;
+    }
+    .thumbnails-side {
+        gap: 15px;
+        transform: translate(-0px);
+        width: 320px;
+    }
+    .thumbnails-image {
+        width: 75px;
+        height: 75px;
+    }
+    .product-name {
+        font-size: 2.2rem;
+    }
+    .company-name {
+        font-size: 0.8rem;
+    }
+    .product-description {
+        font-size: 0.8rem;
+    }
+    .increase-product p {
+        margin-left: 10px;
+    }
+    .line {
+        min-width: 90%;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 811px) {
+    
+    .navigation-bar {
+        flex-direction: column;
+    }
+    .navigation-bar button {
+        position: absolute;
+        right: 900px;
+    }
+    .burger-menu-button {
+        position: relative;
+        cursor: pointer;
+        opacity: 1;
+        z-index: 100;
+        left: -8%;
+        top: 3px;
+    }
+    .user-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .header-container {
+        position: relative;
+        top: 10px;
+    }
+    .line {
+        position: absolute;
+        border: none;
+    }
+    .center-box {
+        padding: 0 30px;
+        justify-content: space-between;
+    }
+    .cart-button:hover path {
+        fill: #69707D;
+        transition: inherit;
+    }
+    .user-icon:hover {
+        border: 2px solid transparent;
+        transition: inherit;
+    }
+    .checkout:hover {
+        opacity: inherit;
+        transition: inherit;
+    }
+    .cart {
+        top: 50px;
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .cart {
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+
+@media screen and (max-width: 370px) {
+    .cart {
+        width: 350px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

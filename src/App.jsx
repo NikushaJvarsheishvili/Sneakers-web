@@ -3,6 +3,8 @@ import './styles/config.css'
 import { Header } from './components/Header'
 import { Product } from './components/Product'
 import { useState } from 'react'
+import { CustomerReview } from './components/CustomerReviews'
+
 
 function App() {
   const [selectedQuantity, setSelectedQuantity] = useState(0)
@@ -26,6 +28,7 @@ function App() {
         cartItem={cartItem} 
         setCartItem={setCartItem}
       />
+      <CustomerReview />
     </>
   )
 }

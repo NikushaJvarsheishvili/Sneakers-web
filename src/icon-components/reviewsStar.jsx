@@ -1,8 +1,6 @@
-
-
-
-export const Star = (props) => {
-
+export const ReviewsStar = (props) => {
+    
+    
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +8,7 @@ export const Star = (props) => {
             height="19.086"
             viewBox="0 0 24 24"
             fill={props.color}
-            stroke={props.stroke}
+            stroke={props.border}
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -19,4 +17,3 @@ export const Star = (props) => {
         </svg>
     )
 }
-
