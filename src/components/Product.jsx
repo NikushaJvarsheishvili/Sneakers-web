@@ -1,5 +1,9 @@
 import '../styles/product.css'
+<<<<<<< HEAD
 import '../responsive-style/product-resp.css'
+=======
+import '../respon-style/product-resp.css'
+>>>>>>> 7430714b56efa6ab1178f0737c885a6653edf222
 import { ProductStars } from '../product-components/ProductStars'
 import { AddToCart } from '../product-components/AddToCart'
 import { ProductImages } from '../product-components/Product-images'

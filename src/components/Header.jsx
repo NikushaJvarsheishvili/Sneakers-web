@@ -1,5 +1,9 @@
 import '../styles/header.css'
+<<<<<<< HEAD
 import '../responsive-style/header-resp.css'
+=======
+import '../respon-style/header-resp.css'
+>>>>>>> 7430714b56efa6ab1178f0737c885a6653edf222
 import LogoName from '../assets/logo.svg'
 import { HeaderCart } from '../icon-components/HeaderCart'
 import { assetsBaseUrl, loggedInUser, product } from '../data'
