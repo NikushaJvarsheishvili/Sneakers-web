@@ -1,28 +1,36 @@
-import { useState } from 'react'
-import { product } from '../data'
+import { loggedInUser } from '../data'
 import { ReviewsStar } from '../icon-components/reviewsStar'
 
 
-export const UsersComponent = () => {
-    const [userData, setUserData] = useState(product.reviews)
-
-
-
-    const users = userData.map((item, index) => {
+export const UsersComponent = (props) => {
+    
+    
+    const users = props.userData.map((item, index) => {
 
         const allStars = []
     
 
         for(let i = 0; i < 5; i ++) {
-            if(allStars.length < product.reviews[index].starRating) {
+            if(allStars.length < props.userData[index].starRating) {
                 allStars.push(<ReviewsStar key={i} color={'#FAD409'} border={'#FAD409'}/>)
             } else {
                 allStars.push(<ReviewsStar key={i} color={'none'} border={'#616161'}/>)
             }
+
+            
+
+
         }
 
-        const starsMap = allStars.map(item => item)
-
+        const starsMap = allStars.map(item => item)    
+        const deleteFunction = (buttonIndex) => {
+            const deleteFilter = props.userData.filter((_, index) => {
+                if(buttonIndex !== index) {
+                    return true
+                }
+            })
+            props.setUserData(deleteFilter)
+        }
 
 
         return (
@@ -31,7 +39,20 @@ export const UsersComponent = () => {
                     <img src="/src/assets/user-placeholder.png" alt="" />
                 </div>
                 <div className='user-rating'>
-                    <p className='user-name'>{item.user}</p>
+                    <div className='name-editing-container'>
+                        <p className='user-name'>{item.user}</p>
+
+                        {props.userData[index].user === loggedInUser.name &&
+                            
+                            <div className='editing-button-container'>
+                                <button onClick={() => deleteFunction(index)} className='delete'>Delete</button>
+                                <button className='edit'>Edit</button>
+                            </div>
+                            
+                        }
+                        
+                    </div>
+                    
                     <div className='stars'>{starsMap}</div>
                     <p className='advice'>{item.headline}</p>
                     <p className='user-description'>{item.writtenReview}</p>

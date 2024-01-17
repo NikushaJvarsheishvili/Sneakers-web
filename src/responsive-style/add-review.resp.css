@@ -1,0 +1,73 @@
+@media screen and (max-width: 1200px) {
+    .add-review-center-box {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .add-review-center-box {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .add-review-center-box {
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (max-width: 874px) {
+    .add-review-center-box {
+        width: 90%;
+    }
+}
+
+
+
+@media screen and (max-width: 671px) {
+    .add-review-center-box {
+        width: 100%;
+        padding: 0 23px;
+    }
+    .title {
+        position: relative;
+        right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 621px) {
+    .add-review-container {
+        transform: translate(0, 750px);
+    }
+    .add-review-center-box {
+        padding: 0 23px;
+    }
+
+    .title {
+        right: 0;
+    }
+    .headline, .written-review {
+        font-size: 14px;
+    }
+    .headline-label, .written-review-label {
+        font-size: 1rem;
+    }
+    .error {
+        font-size: 14px;
+    }
+    .overall-rating {
+        font-size: 1rem;
+    }
+    .cancel, .add {
+        width: 91.912px;
+        height: 40px;
+    }
+    .stars-button svg {
+        width: 33px;
+        height: 33px;
+    }
+
+}

@@ -3,7 +3,13 @@ import '../responsive-style/customerReviews-resp.css'
 import { UsersComponent } from '../customer-reviews-components/UsersComponents'
 
 
-export const CustomerReview = () => {
+export const CustomerReview = (props) => {
+
+    const writeReviewFunction = () => {
+        props.setAddReview(true)
+    }
+
+
 
 
     return (
@@ -13,9 +19,12 @@ export const CustomerReview = () => {
                         <div className='title-and-button'>
                     <h1 className='title'>Customer reviews</h1>
                         <button  
-                        className='write-review-button'><span>Write a review</span></button>
+                        onClick={writeReviewFunction}
+                        className='write-review-button'>
+                            <span>Write a review</span>
+                        </button>
                      </div>
-                    <UsersComponent />
+                    <UsersComponent userData={props.userData} setUserData={props.setUserData}/>
                     </div>
                 </div>
         </>)

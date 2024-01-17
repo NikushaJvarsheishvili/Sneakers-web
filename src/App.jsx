@@ -4,12 +4,19 @@ import { Header } from './components/Header'
 import { Product } from './components/Product'
 import { useState } from 'react'
 import { CustomerReview } from './components/CustomerReviews'
+import { AddReview }  from './components/AddReview'
+import { product } from './data'
 
 
 function App() {
   const [selectedQuantity, setSelectedQuantity] = useState(0)
   const [selectedItem, setSelectedItem] = useState(0)
   const [cartItem, setCartItem] = useState(false)
+  const [addReview, setAddReview] = useState(false)
+  const [userData, setUserData] = useState(product.reviews)
+
+
+
 
 
   return (
@@ -28,7 +35,12 @@ function App() {
         cartItem={cartItem} 
         setCartItem={setCartItem}
       />
-      <CustomerReview />
+
+      {addReview ? <AddReview setAddReview={setAddReview} setUserData={setUserData} userData={userData}/> : 
+      <CustomerReview setAddReview={setAddReview} userData={userData} setUserData={setUserData}/>}
+      
+
+      
     </>
   )
 }
