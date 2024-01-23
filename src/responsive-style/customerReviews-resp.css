@@ -21,7 +21,10 @@
         width: 100%;
     }
     .title {
-        padding-left: 10px;
+        padding-left: 20px;
+    }
+    .users-commentars {
+        margin: 10px 15px 30px;
     }
 }
 
@@ -45,9 +48,10 @@
     }
     .users-commentars {
         flex-direction: column;
+        margin: 20px 0 0 0 ;
     }
     .title {
-        font-size: 1.7rem;
+        font-size: 1.375rem;
         padding: 0;
     }
     .write-review-button {

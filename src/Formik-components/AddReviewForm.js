@@ -7,8 +7,3 @@ export const validationSchema = object({
 })
 
 
-export const initialValues = {
-    headline: '',
-    writtenReview: '',
-    starRating: null
-}

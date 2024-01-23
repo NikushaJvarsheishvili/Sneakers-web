@@ -57,9 +57,6 @@
     .product-description {
         font-size: 0.8rem;
     }
-    .increase-product p {
-        margin-left: 10px;
-    }
 }
 
 
@@ -77,9 +74,7 @@
    .image-side {
     transform: translate(60px);
    }
-   .increase-product p {
-    margin-left: 10px;
-}
+   
    
 }
 
@@ -112,9 +107,6 @@
         gap: 13px;
         transform: translate(-0px);
         width: 320px;
-    }
-    .increase-product p {
-        margin-left: 10px;
     }
     .thumbnails-image {
         width: 65px;

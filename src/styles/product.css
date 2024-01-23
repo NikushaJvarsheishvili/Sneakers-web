@@ -143,6 +143,7 @@
 .increase-product p {
     font-weight: 700;
     width: 20px;
+    text-align: center;
 }
 .increase-product button:disabled {
     opacity: 0.5;

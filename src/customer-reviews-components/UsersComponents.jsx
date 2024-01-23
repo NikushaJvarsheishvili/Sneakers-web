@@ -1,11 +1,11 @@
 import { loggedInUser } from '../data'
 import { ReviewsStar } from '../icon-components/reviewsStar'
 
-
 export const UsersComponent = (props) => {
     
     
     const users = props.userData.map((item, index) => {
+
 
         const allStars = []
     
@@ -16,9 +16,6 @@ export const UsersComponent = (props) => {
             } else {
                 allStars.push(<ReviewsStar key={i} color={'none'} border={'#616161'}/>)
             }
-
-            
-
 
         }
 
@@ -31,7 +28,20 @@ export const UsersComponent = (props) => {
             })
             props.setUserData(deleteFilter)
         }
-
+        
+        
+        
+        const edit = (tag) => {
+            props.setAddReview(true)
+            props.setEditForm(true)
+            
+            
+            props.setEditUser({...props.editUser, 
+                headline: props.userData[tag].headline,
+                writtenReview: props.userData[tag].writtenReview,
+                starRating: props.userData[tag].starRating
+            })
+        }
 
         return (
             <div className='users-commentars' key={index}>
@@ -46,7 +56,7 @@ export const UsersComponent = (props) => {
                             
                             <div className='editing-button-container'>
                                 <button onClick={() => deleteFunction(index)} className='delete'>Delete</button>
-                                <button className='edit'>Edit</button>
+                                <button className='edit' onClick={() => edit(index)}>Edit</button>
                             </div>
                             
                         }
@@ -61,7 +71,7 @@ export const UsersComponent = (props) => {
         )
     })
 
-    
+
     return (
         <>
             {users}

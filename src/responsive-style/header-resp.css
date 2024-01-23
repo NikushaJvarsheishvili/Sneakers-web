@@ -41,9 +41,6 @@
     .product-description {
         font-size: 0.8rem;
     }
-    .increase-product p {
-        margin-left: 10px;
-    }
     .line {
         min-width: 90%;
     }
@@ -55,17 +52,61 @@
 
 
 @media screen and (max-width: 811px) {
-    
     .navigation-bar {
+        position: fixed;
         flex-direction: column;
+        border: none;
+        background-color: white;
+        width: 0;
+        height: 1000px;
+        transform: translate(-50px);
+        gap: 0;
+        z-index: 10;
+        inset: 0;
+        transition: all 0.5s;
     }
     .navigation-bar button {
-        position: absolute;
-        right: 900px;
+        color: black;
+        font-weight: 700;
+        font-size: 1.125rem;
+        padding-bottom: 5px;
+        border: none;
+        width: 0;
+        transform: translate(-120px);
+        transition: all 0.5s ease;
+        margin: 20px 0 0 20px;
+    }
+    .menu-background {
+        position: fixed;
+        transform: translate(-32px, -2px);
+        border: none;
+        background: rgba(0, 0, 0, 0.75);
+        width: 102%; 
+        height: 115rem;
+        z-index: 2;
+        transition: all 0.4s;
+    }
+    .open-menu {
+        width: 300px;
+        transition: all 0.5s;
+    }
+    .open-menu button {
+        transform: translate(0);
+        transition: all 0.5s ease;
+    }
+    .close {
+        position: fixed;
+        transform: translate(-9px, -10px);
+    }
+    .navigation-bar button:hover {
+        color: black;
+        cursor: pointer;
+        border-bottom: none;
     }
     .burger-menu-button {
         position: relative;
         cursor: pointer;
+        width: 16px;
         opacity: 1;
         z-index: 100;
         left: -8%;
@@ -102,6 +143,7 @@
     .cart {
         top: 50px;
         left: 40%;
+        z-index: 1;
     }
 }
 
