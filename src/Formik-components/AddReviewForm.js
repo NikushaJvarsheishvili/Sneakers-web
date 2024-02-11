@@ -1,4 +1,4 @@
-import { string, object, number } from "Yup";
+import { string, object, number } from "yup";
 
 export const validationSchema = object({
   headline: string().min(4).trim().required("Please enter your headline"),
